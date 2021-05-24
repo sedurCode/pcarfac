@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<magic>
+  <Styles>
+    <Style name="default">
+      <Nodes/>
+      <Classes>
+        <group border="2" flex-direction="column" padding="1"/>
+      </Classes>
+      <Types>
+        <Slider border="0"/>
+        <ToggleButton border="0" max-height="50" caption-size="0"/>
+        <TextButton border="0" max-height="50" caption-size="0"/>
+        <ComboBox border="0" max-height="50" caption-size="0"/>
+        <Plot border="0" margin="0" padding="0" background-color="00000000"/>
+      </Types>
+    </Style>
+  </Styles>
+  <View id="root" flex-direction="column">
+    <View border="2" background-color="black">
+      <Plot source="oscilloscope" plot-color="orange"/>
+    </View>
+    <View margin="0" padding="0">
+      <View caption="Generator" class="group">
+        <ComboBox caption="Type" parameter="mainType"/>
+        <Slider caption="Frequency" parameter="mainfreq"/>
+        <Slider caption="Level" parameter="mainlevel"/>
+      </View>
+      <View caption="LFO" class="group">
+        <ComboBox caption="LFO-Type" parameter="lfoType"/>
+        <Slider caption="Frequency" parameter="lfofreq"/>
+        <Slider caption="Level" parameter="lfolevel"/>
+      </View>
+      <View caption="VFO" class="group">
+        <ComboBox caption="VFO-Type" parameter="vfoType"/>
+        <Slider caption="Frequency" parameter="vfofreq"/>
+        <Slider caption="Level" parameter="vfolevel"/>
+      </View>
+    </View>
+  </View>
+</magic>
